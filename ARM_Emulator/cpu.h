@@ -60,12 +60,20 @@ typedef struct
 	uint8_t fetched;
 	uint8_t decoded;
 	uint8_t* memory;
-	uint32_t memsize;
-	uint8_t* binary_data;
-	uint8_t binsize;
+	uint8_t mem_size;
 } ArmCPU;
+
+typedef struct
+{
+	uint32_t operand;
+	uint32_t carry_out;
+} shifter;
 
 int InitCPU(ArmCPU* cpu, char* file);
 void Step(ArmCPU* cpu);
 
 void Fetch(ArmCPU* cpu);
+void Decode(ArmCPU* cpu);
+void Execute(ArmCPU* cpu);
+
+uint32_t get_bits(uint32_t number, uint8_t start, uint8_t length);

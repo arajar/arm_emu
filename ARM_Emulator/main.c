@@ -17,13 +17,13 @@ int ARM_User32_MOV_Emulator(unsigned int* registers, unsigned int* memory)
 
 int main(int argc, char** argv)
 {
-	//ARM_User32_MOV_Emulator(reg, memory);
 	ArmCPU cpu;
 	InitCPU(&cpu, "test.bi");
 
-	while (cpu.registers[PC] < cpu.binsize + 8)
+	while (cpu.registers[PC] < cpu.mem_size + 8)
 	{
 		Step(&cpu);
+		ARM_User32_MOV_Emulator(cpu.registers, cpu.memory);
 	}
 
 
