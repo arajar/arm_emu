@@ -18,12 +18,21 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="instructions.h">
+    <ClInclude Include="cpu.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ARM_Emulator.cpp">
+    <ClCompile Include="debug.c">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu.c">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>

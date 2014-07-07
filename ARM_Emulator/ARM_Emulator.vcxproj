@@ -79,10 +79,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="instructions.h" />
+    <ClInclude Include="cpu.h" />
+    <ClInclude Include="debug.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ARM_Emulator.cpp" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="cpu.c" />
+    <ClCompile Include="debug.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
